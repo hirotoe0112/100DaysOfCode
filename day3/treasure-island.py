@@ -33,7 +33,6 @@ if door1 == "left":
         "You come to a lake. There is an island in the middle of the lake. Type 'wait' to wait for a boat. Type 'swim' to swim across: \n"
     ).lower()
     if lake == "wait":
-        # あなたは小島に到着し、さらに進むと3つの扉を見つけた。どの扉を選ぶか？を英語で出力
         door2 = input(
             "You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose? Type 'red' or 'yellow' or 'blue': \n"
         ).lower()
