@@ -1,5 +1,6 @@
 from racing_turtle import RacingTurtle
 from turtle import Screen
+from tkinter import messagebox
 
 screen = Screen()
 screen.setup(width=500, height=400)
@@ -29,8 +30,12 @@ while True:
         if turtle.is_goal():
             winning_color = turtle.t.pencolor()
             if winning_color == user_choice:
-                print(f"You've won! The {winning_color} turtle is the winner!")
+                messagebox.showinfo(
+                    "result", f"You've won! The {winning_color} turtle is the winner!"
+                )
             else:
-                print(f"You've lost! The {winning_color} turtle is the winner!")
+                messagebox.showinfo(
+                    "result", f"You've lost! The {winning_color} turtle is the winner!"
+                )
             screen.bye()
             exit()
