@@ -1,4 +1,5 @@
 from turtle import Turtle
+import random
 
 DIRECTIONS = {"up": 90, "down": 270, "left": 180, "right": 0}
 
@@ -13,7 +14,9 @@ class Snake:
     def add_segment(self, position):
         segment = Turtle()
         segment.shape("square")
-        segment.color("white")
+        segment.color(
+            (random.randint(50, 255), random.randint(50, 255), random.randint(50, 255))
+        )
         segment.speed("slowest")
         segment.penup()
         segment.goto(position)

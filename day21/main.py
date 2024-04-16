@@ -5,6 +5,7 @@ from scoreboard import Scoreboard
 import time
 
 screen = Screen()
+screen.colormode(255)
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("My Snake Game")
