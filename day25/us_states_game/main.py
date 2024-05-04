@@ -25,7 +25,7 @@ while is_game_on:
         is_game_on = False
         break
     elif answer_state.title() in data.state.values:
-        state = data[data.state == answer_state]
+        state = data[data.state == answer_state.title()]
         writer.goto(int(state.x), int(state.y))
         writer.write(answer_state.title(), align="center")
         user_answers.append(answer_state)
