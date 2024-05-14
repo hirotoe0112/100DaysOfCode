@@ -9,9 +9,9 @@ FONT_COLOR = "#0F1035"
 TIMER_COLOR = "#DCF2F1"
 CHECK_COLOR = "#365486"
 FONT_NAME = "Courier"
-WORK_MIN = 1
-SHORT_BREAK_MIN = 1
-LONG_BREAK_MIN = 2
+WORK_MIN = 25
+SHORT_BREAK_MIN = 5
+LONG_BREAK_MIN = 20
 
 reps = 0
 timer_id = None
@@ -51,15 +51,15 @@ def start_timer():
 
     if reps % 8 == 0:
         title_label.config(text="Break")
-        winsound.Beep(1000, 1500)
+        winsound.PlaySound("break.wav", winsound.SND_FILENAME)
         count_down(long_break_seconds)
     elif reps % 2 == 0:
         title_label.config(text="Break")
-        winsound.Beep(1000, 1500)
+        winsound.PlaySound("break.wav", winsound.SND_FILENAME)
         count_down(short_break_seconds)
     else:
         title_label.config(text="Work")
-        winsound.Beep(600, 1500)
+        winsound.PlaySound("work.wav", winsound.SND_ASYNC)
         count_down(work_seconds)
 
 
